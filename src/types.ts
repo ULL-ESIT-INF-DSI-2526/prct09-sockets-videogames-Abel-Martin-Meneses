@@ -1,3 +1,9 @@
+/**
+ * Tipos y enumeraciones para la gestión de videojuegos en el servidor
+ * Este módulo define las estructuras de datos utilizadas para representar videojuegos, así como los tipos de petición y respuesta que se intercambian entre el cliente y el servidor.
+ * Incluye enumeraciones para plataformas, géneros y desarrolladores de videojuegos, y una interfaz para describir la estructura de un videojuego.
+ * También define los tipos de petición (RequestType) y respuesta (ResponseType) que se utilizan en la comunicación entre el cliente y el servidor.
+ */
 export enum Platform {
   PC = "PC",
   PS5 = "PlayStation 5",

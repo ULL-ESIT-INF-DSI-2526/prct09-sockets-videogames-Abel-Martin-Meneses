@@ -5,6 +5,12 @@ import net from 'net';
 
 const DB_DIR = './collections';
 
+/**
+ * Adds a new videogame to a user's collection
+ * @param user - The user for whom to add the videogame
+ * @param game - The videogame to add
+ * @param callback - The callback function to handle the result
+ */
 export const addVideogame = (
   user: string, 
   game: Videogame, 
@@ -35,6 +41,12 @@ export const addVideogame = (
   });
 };
 
+/**
+ * Updates an existing videogame in a user's collection
+ * @param user - The user for whom to update the videogame
+ * @param game - The updated videogame data
+ * @param callback - The callback function to handle the result
+ */
 export const updateVideogame = (
   user: string, 
   game: Videogame, 
@@ -64,6 +76,12 @@ export const updateVideogame = (
   });
 };
 
+/**
+ * Removes a videogame from a user's collection
+ * @param user - The user for whom to remove the videogame
+ * @param id - The ID of the videogame to remove
+ * @param callback - The callback function to handle the result
+ */
 export const removeVideogame = (
   user: string, 
   id: number, 
@@ -92,6 +110,11 @@ export const removeVideogame = (
   });
 };
 
+/**
+ * Lists all videogames in a user's collection
+ * @param user - The user for whom to list the videogames
+ * @param callback - The callback function to handle the result
+ */
 export const listVideogames = (
   user: string, 
   callback: (err: string | undefined, userGames: Videogame[] | undefined) => void
@@ -125,6 +148,12 @@ export const listVideogames = (
   });
 };
 
+/**
+ * Reads a specific videogame from a user's collection
+ * @param user - The user for whom to read the videogame
+ * @param id - The ID of the videogame to read
+ * @param callback - The callback function to handle the result
+ */
 export const readVideogame = (
   user: string, 
   id: number, 

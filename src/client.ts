@@ -7,6 +7,11 @@ import { getColoredValue } from './utils.js';
 
 const PORT = 60300;
 
+/**
+ * Envía una solicitud al servidor para realizar una operación en la colección de videojuegos de un usuario
+ * @param request - El objeto de solicitud que contiene el tipo de operación, el usuario, y los datos relevantes (videogame o id)
+ * La función establece una conexión con el servidor, envía la solicitud en formato JSON, y maneja la respuesta del servidor para mostrar los resultados al usuario.
+ */
 const sendRequestToServer = (request: RequestType) => {
   const client = net.connect({ port: PORT });
   let wholeData = '';
@@ -40,6 +45,10 @@ const sendRequestToServer = (request: RequestType) => {
 
 }
 
+/**
+ * Imprime la información de un videojuego en la consola de forma formateada
+ * @param game - El objeto de videojuego que se desea imprimir
+ */
 const printVideogame = (game: Videogame) => {
   console.log('--------------------------------');
   console.log(`ID: ${game.id}`);

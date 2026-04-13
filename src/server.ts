@@ -4,6 +4,11 @@ import { addVideogame, updateVideogame, removeVideogame, listVideogames, readVid
 
 const PORT = 60300;
 
+/**
+ * Servidor de videojuegos que escucha en el puerto especificado y maneja las peticiones de los clientes para gestionar colecciones de videojuegos.
+ * El servidor soporta las operaciones de agregar, actualizar, eliminar, listar y leer videojuegos en la colección de cada usuario.
+ * Cada petición se procesa y se envía una respuesta al cliente indicando el resultado de la operación.
+ */
 net.createServer((connection) => {
   console.log('Un cliente se ha conectado.');
   let wholeData = '';
@@ -15,6 +20,11 @@ net.createServer((connection) => {
       const request: RequestType = JSON.parse(wholeData.trim());
       console.log(`Petición recibida: ${request.type} del usuario ${request.user}`);
 
+      /**
+       * Envía una respuesta al cliente con el resultado de la operación solicitada
+       * @param response - El objeto de respuesta que contiene el tipo de operación, el éxito, un mensaje opcional y los datos relevantes (videogames o videogame)
+       * La respuesta se convierte a JSON y se envía al cliente, luego se cierra la conexión.
+       */
       const sendResponse = (response: ResponseType) => {
         connection.write(JSON.stringify(response) + '\n');
         connection.end();
