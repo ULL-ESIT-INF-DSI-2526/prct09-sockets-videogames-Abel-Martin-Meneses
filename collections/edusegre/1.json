@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "Zelda",
+  "description": "Buen juego",
+  "platform": "Nintendo Switch",
+  "genre": "Adventure",
+  "developer": "Nintendo",
+  "year": 2017,
+  "multiplayer": false,
+  "hours": 50,
+  "value": 45
+}

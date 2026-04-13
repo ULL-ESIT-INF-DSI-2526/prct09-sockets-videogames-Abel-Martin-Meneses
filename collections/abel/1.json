@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "GTA V",
+  "description": "Juego de simulación basado en robar y matar",
+  "platform": "PlayStation 5",
+  "genre": "Simulación",
+  "developer": "Rockstar Games",
+  "year": 2013,
+  "multiplayer": true,
+  "hours": 60,
+  "value": 30
+}
